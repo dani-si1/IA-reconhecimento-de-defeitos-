@@ -1,0 +1,14 @@
+# DeepPCB no formato Ultralytics.
+# Sem a chave "path", a Ultralytics usa a pasta deste arquivo (data/) como raiz,
+# então as imagens ficam em data/images/{train,val} e os rótulos em data/labels/{train,val}.
+# Gere essa estrutura com: python src/prepare_deeppcb.py --src <DeepPCB>/PCBData
+train: images/train   # 1000 imagens (trainval.txt do DeepPCB)
+val: images/val       # 500 imagens (test.txt do DeepPCB)
+
+names:
+  0: open        # trilha interrompida
+  1: short       # curto entre trilhas
+  2: mousebite   # "mordida" na borda da trilha
+  3: spur        # protuberância de cobre saindo da trilha
+  4: copper      # cobre espúrio (ilha de cobre indevida)
+  5: pin-hole    # furo indevido no cobre

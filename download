@@ -1,0 +1,18 @@
+# dataset (baixe e converta com src/prepare_deeppcb.py)
+data/images/
+data/labels/
+*.cache
+
+# saídas locais
+runs/
+outputs/
+yolo26*.pt
+!weights/best.pt
+!weights/last.pt
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
